@@ -1,0 +1,68 @@
+body
+{
+    background-color: white;
+    color: #15151e;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+table
+{
+    width: 75%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+th
+{
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #6b6b75;
+    border-bottom: 2px solid #15151e;
+}
+
+td
+{
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid #d0d0d2;
+}
+
+tbody tr:hover
+{
+    background-color: #f5f5f7;
+}
+
+.driver, .pts
+{
+    font-weight: bold;
+}
+
+.team::before
+{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.mercedes::before     { background-color: #27f4d2; }
+.ferrari::before      { background-color: #e8002d; }
+.redbull::before      { background-color: #3671c6; }
+.mclaren::before      { background-color: #ff8000; }
+.racingbulls::before  { background-color: #6692ff; }
+.alpine::before       { background-color: #ff87bc; }
+.haas::before         { background-color: #b6babd; }
+.audi::before         { background-color: #8b0000; }
+.astonmartin::before  { background-color: #229971; }
+.williams::before     { background-color: #64c4ff; }
+.cadillac::before     { background-color: #444444; }
+
+@media (max-width: 700px)
+{
+    table { width: 95%; }
+    th, td { padding: 10px 6px; font-size: 13px; }
+}
