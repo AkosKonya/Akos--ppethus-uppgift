@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Teckenkodning: gor att specialtecken visas korrekt -->
+        <meta charset="UTF-8">
+        <!-- Viewport: anpassar sidan efter skermens bredd (mobil/dator) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Sidans titel som visas i webblesarens flik -->
+        <title>F1 2.0 - Races</title>
+        <!-- Lenka till den gemensamma CSS-filen -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Sidhuvud med logga och navigation (samma pa alla sidor) -->
+        <header class="site-header">
+            <!-- Logga: "2.0" ligger i en span sa den kan fa egen stil -->
+            <div class="logo">F1<span>2.0</span></div>
+            <!-- Huvudmeny: klassen "active" markerar sidan man befinner sig pa -->
+            <nav class="main-nav">
+                <a href="index.html">Drivers</a>
+                <a href="teams.html">Teams</a>
+                <a href="races.html" class="active">Races</a>
+            </nav>
+        </header>
+
+        <!-- Rubrik och underrubrik for sidan -->
+        <div class="page-title">
+            <h1>2026 Race Results</h1>
+            <p>Winner of each Grand Prix (example data - edit as you like)</p>
+        </div>
+
+        <!-- Behallare som ramar in tabellen -->
+        <div class="content-container">
+            <table>
+                <!-- Tabellhuvud med kolumnrubriker -->
+                <thead>
+                    <tr>
+                        <th>Grand Prix</th>
+                        <th>Date</th>
+                        <th>Winner</th>
+                        <th>Car</th>
+                        <th>Laps</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <!-- Tabellkropp: en rad per Grand Prix i kronologisk ordning -->
+                <tbody>
+                    <tr>
+                        <td class="driver">Australia</td>
+                        <td>08 Mar 2026</td>
+                        <td>Kiwi Antonelli</td>
+                        <td class="team mercades">Mercades</td>
+                        <td>58</td>
+                        <td>1:23:45.123</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">China</td>
+                        <td>15 Mar 2026</td>
+                        <td>George Russeller</td>
+                        <td class="team mercades">Mercades</td>
+                        <td>56</td>
+                        <td>1:31:12.456</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Japan</td>
+                        <td>29 Mar 2026</td>
+                        <td>Kiwi Antonelli</td>
+                        <td class="team mercades">Mercades</td>
+                        <td>53</td>
+                        <td>1:28:03.789</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Miami</td>
+                        <td>03 May 2026</td>
+                        <td>Max Verstoppen</td>
+                        <td class="team bluebull">Blue Bull Racing</td>
+                        <td>57</td>
+                        <td>1:30:27.014</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Monaco</td>
+                        <td>07 Jun 2026</td>
+                        <td>Charles Leclercer</td>
+                        <td class="team ferarri">Ferarri</td>
+                        <td>78</td>
+                        <td>1:42:55.601</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Spain</td>
+                        <td>14 Jun 2026</td>
+                        <td>Lando Norice</td>
+                        <td class="team mclaran">McLaran</td>
+                        <td>66</td>
+                        <td>1:32:18.332</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Great Britain</td>
+                        <td>05 Jul 2026</td>
+                        <td>Lewis Hamlikdom</td>
+                        <td class="team ferarri">Ferarri</td>
+                        <td>52</td>
+                        <td>1:27:40.870</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Belgium</td>
+                        <td>26 Jul 2026</td>
+                        <td>Kiwi Antonelli</td>
+                        <td class="team mercades">Mercades</td>
+                        <td>44</td>
+                        <td>1:24:09.245</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Italy</td>
+                        <td>06 Sep 2026</td>
+                        <td>Oscar Piastry</td>
+                        <td class="team mclaran">McLaran</td>
+                        <td>53</td>
+                        <td>1:15:22.918</td>
+                    </tr>
+                    <tr>
+                        <td class="driver">Singapore</td>
+                        <td>11 Oct 2026</td>
+                        <td>Kiwi Antonelli</td>
+                        <td class="team mercades">Mercades</td>
+                        <td>62</td>
+                        <td>1:40:51.507</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

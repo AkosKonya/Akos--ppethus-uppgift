@@ -1,18 +1,122 @@
+/* Grundstil for hela sidan */
 body
 {
-    background-color: white;
-    color: #15151e;
-    margin: 0;
+    background-color: #030a17;   /* Morkbla bakgrund */
+    color: white;                /* Vit standardtext */
+    margin: 0;                   /* Tar bort webblesarens standardmarginal */
     font-family: Verdana, sans-serif;
 }
 
+/* Sidhuvud (logga + meny) */
+.site-header
+{
+    background-color: #0b0b2d;
+    display: flex;                    /* Legger logga och meny bredvid varandra */
+    align-items: center;              /* Centrerar vertikalt */
+    justify-content: space-between;   /* Logga till venster, meny till hoger */
+    flex-wrap: wrap;                  /* Tillater radbrytning pa smala skermar */
+    padding: 0 5%;
+}
+   
+/* Logga */
+.logo
+{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #314e88;
+    padding: 14px 0;
+    letter-spacing: 1px;              /* Extra avstand mellan bokstaverna */
+}
+   
+/* "2.0" i loggan: mindre och vit */
+.logo span
+{
+    color: white;
+    margin-left: 6px;
+    font-size: 18px;
+}
+   
+/* Navigationsmeny */
+.main-nav
+{
+    display: flex;
+    gap: 6px;                         /* Avstand mellan menylenkarna */
+}
+   
+/* Vanlig menylenk */
+.main-nav a
+{
+    color: #d0d0d2;
+    text-decoration: none;            /* Tar bort understrykning */
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;        /* Versaler */
+    padding: 22px 18px 18px;
+    border-bottom: 4px solid transparent;   /* Osynlig linje som blir synlig vid hover/active */
+    margin-bottom: -4px;
+    transition: color 0.15s, border-color 0.15s;   /* Mjuk overgang */
+}
+   
+/* Vid hover (musen ligger over en menylenk) */
+.main-nav a:hover
+{
+    color: white;
+    border-bottom-color: #6b6b75;
+}
+   
+/* Den sida man befinner sig pa just nu */
+.main-nav a.active
+{
+    color: white;
+    border-bottom-color: #1e3562;
+}
+   
+/* Sidrubrik */
+.page-title
+{
+    width: 80%;
+    margin: 30px auto 0;              /* "auto" centrerar horisontellt */
+}
+   
+.page-title h1
+{
+    margin: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+   
+/* Underrubrik */
+.page-title p
+{
+    margin: 6px 0 0;
+    color: #a0a0aa;                   /* Gra text */
+    font-size: 14px;
+}
+   
+/* Innehallsbehallare (ramar in tabellen) */
+.content-container
+{
+    width: 80%;
+    margin: 20px auto;
+    padding: 2px;
+    background-color: black;
+    border-radius: 10px;              /* Rundade horn */
+}
+   
+/* Tabell */
 table
 {
-    width: 75%;
-    margin: 40px auto;
-    border-collapse: collapse;
+    background-color: black;
+    width: 92%;
+    margin: 10px auto;
+    border-collapse: collapse;        /* Slar ihop cellkanter till en linje */
+    border-radius: 10px;
+    border-bottom: none;
 }
-
+   
+/* Kolumnrubriker */
 th
 {
     text-align: left;
@@ -21,48 +125,74 @@ th
     color: #6b6b75;
     border-bottom: 2px solid #15151e;
 }
-
+   
+/* Tabellceller */
 td
 {
     text-align: left;
     padding: 16px;
-    border-bottom: 1px solid #d0d0d2;
+    border-bottom: 1px solid #d0d0d2;   /* Tunn linje mellan raderna */
 }
-
+   
+/* Markerar raden under musen */
 tbody tr:hover
 {
-    background-color: #f5f5f7;
+    background-color: #15151e;
 }
-
+   
+/* Fet text for forare/loppnamn och poeng */
 .driver, .pts
 {
     font-weight: bold;
 }
-
+   
+/* Lagferger, Skapar en liten fergad ruta framfor lagnamnet */
 .team::before
 {
-    content: "";
+    content: "";                      /* Tomt innehall: rutan skapas enbart med CSS */
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 10px;
     border-radius: 2px;
 }
-
-.mercedes::before     { background-color: #27f4d2; }
-.ferrari::before      { background-color: #e8002d; }
-.redbull::before      { background-color: #3671c6; }
-.mclaren::before      { background-color: #ff8000; }
-.racingbulls::before  { background-color: #6692ff; }
-.alpine::before       { background-color: #ff87bc; }
-.haas::before         { background-color: #b6babd; }
-.audi::before         { background-color: #8b0000; }
-.astonmartin::before  { background-color: #229971; }
-.williams::before     { background-color: #64c4ff; }
-.cadillac::before     { background-color: #444444; }
-
+   
+/* Varje lag far sin egen ferg pa rutan */
+.mercades::before     { background-color: #27f4d2; }
+.ferarri::before      { background-color: #e8002d; }
+.bluebull::before      { background-color: #3671c6; }
+.mclaran::before      { background-color: #ff8000; }
+.drivingbulls::before  { background-color: #6692ff; }
+.alphine::before       { background-color: #ff87bc; }
+.heas::before         { background-color: #b6babd; }
+.audio::before         { background-color: #8b0000; }
+.astonmart::before  { background-color: #229971; }
+.williamson::before     { background-color: #64c4ff; }
+.cadillak::before     { background-color: #444444; }
+   
+/* Responsiv design: anpassning for smala skermar (mobil) */
 @media (max-width: 700px)
 {
-    table { width: 95%; }
-    th, td { padding: 10px 6px; font-size: 13px; }
+    /* Bredare innehall pa sma skermar */
+    .content-container, .page-title
+    {
+        width: 94%;
+    }
+    table
+    {
+        width: 98%;
+    }
+    /* Mindre luft och text i tabellen */
+    th, td
+    {
+        padding: 10px 6px;
+
+        font-size: 13px;
+    }
+    /* Mindre menylenkar */
+    .main-nav a
+    {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
 }

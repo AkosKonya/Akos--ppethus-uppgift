@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Teckenkodning: gor att specialtecken visas korrekt -->
+        <meta charset="UTF-8">
+        <!-- Viewport: anpassar sidan efter skermens bredd (mobil/dator) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Sidans titel som visas i webblesarens flik -->
+        <title>F1 2.0 - Teams</title>
+        <!-- Lenka till den gemensamma CSS-filen -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Sidhuvud med logga och navigation (samma pa alla sidor) -->
+        <header class="site-header">
+            <!-- Logga: "2.0" ligger i en span sa den kan fa egen stil -->
+            <div class="logo">F1<span>2.0</span></div>
+            <!-- Huvudmeny: klassen "active" markerar sidan man befinner sig pa -->
+            <nav class="main-nav">
+                <a href="index.html">Drivers</a>
+                <a href="teams.html" class="active">Teams</a>
+                <a href="races.html">Races</a>
+            </nav>
+        </header>
+
+        <!-- Rubrik och underrubrik for sidan -->
+        <div class="page-title">
+            <h1>2026 Constructors' Standings</h1>
+            <p>Team points (sum of both drivers)</p>
+        </div>
+
+        <!-- Behallare som ramar in tabellen -->
+        <div class="content-container">
+            <table>
+                <!-- Tabellhuvud med kolumnrubriker -->
+                <thead>
+                    <tr>
+                        <th>Pos.</th>
+                        <th>Team</th>
+                        <th>Drivers</th>
+                        <th>Pts.</th>
+                    </tr>
+                </thead>
+                <!-- Tabellkropp: en rad per stall, sorterad efter lagpoeng -->
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="driver team mercades">Mercades</td>
+                        <td>Antonelli, Russeller</td>
+                        <td class="pts">578</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="driver team ferarri">Ferarri</td>
+                        <td>Hamlikdom, Leclercer</td>
+                        <td class="pts">444</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="driver team mclaran">McLaran</td>
+                        <td>Norice, Piastry</td>
+                        <td class="pts">339</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="driver team bluebull">Blue Bull Racing</td>
+                        <td>Verstoppen, Hadjar</td>
+                        <td class="pts">318</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="driver team drivingbulls">Driving Bulls</td>
+                        <td>Lawsuit, Lindblom, Tsunodo</td>
+                        <td class="pts">114</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="driver team alphine">Alphine</td>
+                        <td>Gassly, Colapinton</td>
+                        <td class="pts">68</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="driver team heas">Heas F1 Team</td>
+                        <td>Bearmann, Oconner</td>
+                        <td class="pts">30</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="driver team audio">Audio</td>
+                        <td>Hulkenburger, Bortoletto</td>
+                        <td class="pts">23</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="driver team williamson">Williamson</td>
+                        <td>Sainsbury, Albone</td>
+                        <td class="pts">12</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="driver team astonmart">Aston Mart</td>
+                        <td>Alonzo, Strolly</td>
+                        <td class="pts">7</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td class="driver team cadillak">Cadillak</td>
+                        <td>Bottass, Perezz</td>
+                        <td class="pts">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
